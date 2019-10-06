@@ -31,7 +31,7 @@
 
     <!-- reverse geocoding config -->
     <entry key='geocoder.enable'>true</entry>
-    <entry key='geocoder.type'>gisgraphy</entry>
-    <entry key='geocoder.url'>http://services.gisgraphy.com/reversegeocoding/search</entry>
+    <entry key='geocoder.type'>nominatim</entry>
+    <entry key='geocoder.url'>https://nominatim.openstreetmap.org/reverse</entry>
 
 </properties>
