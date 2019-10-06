@@ -17,6 +17,14 @@
     For list of available parameters see following page: https://www.traccar.org/configuration-file/
 
     -->
+
+    <!-- logging config -->
+    <entry key='logger.enable'>true</entry>
+    <entry key='logger.level'>all</entry>
+    <entry key='logger.file'>/opt/traccar/logs/tracker-server.log</entry>
+    <entry key='filter.enable'>true</entry>
+    <entry key='filter.zero'>true</entry>
+
     <!-- web interface config -->
     <entry key='web.enable'>true</entry>
     <entry key='web.port'>80</entry>
@@ -44,9 +52,21 @@
     <entry key='mail.smtp.host'>smtp.gmail.com</entry>
     <entry key='mail.smtp.port'>465</entry>
     <entry key='mail.smtp.ssl.enable'>true</entry>
-    <entry key='mail.smtp.from'>ftt.cheewee.tan@grab.com</entry>
+    <entry key='mail.smtp.from'>haldenickk@gmail.com</entry>
     <entry key='mail.smtp.auth'>true</entry>
-    <entry key='mail.smtp.username'>ftt.cheewee.tan@grab.com</entry>
-    <entry key='mail.smtp.password'>rlepvgodovcuddvt</entry>
+    <entry key='mail.smtp.username'>haldenickk@gmail.com</entry>
+    <entry key='mail.smtp.password'>oonickoo</entry>
+
+    <!-- sms notifications
+    <entry key='notificator.types'>web,mail,sms</entry>
+    <entry key='sms.enable'>true</entry>
+    <entry key='sms.smpp.host'>smpp.example.com</entry>
+    <entry key='sms.smpp.port'>2345</entry>
+    <entry key='sms.smpp.username'>systemId</entry>
+    <entry key='sms.smpp.password'>password</entry>
+    <entry key='sms.smpp.notificationsCharset'>GSM</entry>
+    <entry key='sms.smpp.notificationsDataCoding'>0</entry>
+    <entry key='sms.smpp.sourceAddress'>+79000000000</entry>
+    -->
 
 </properties>
