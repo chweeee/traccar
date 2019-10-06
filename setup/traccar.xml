@@ -31,8 +31,7 @@
 
     <!-- reverse geocoding config -->
     <entry key='geocoder.enable'>true</entry>
-    <entry key='geocoder.type'>nominatim</entry>
-    <entry key='geocoder.url'>https://eu1.locationiq.com/v1/reverse.php</entry>
-    <entry key='geocoder.key'>5cd7c03887fe11</entry>
+    <entry key='geocoder.type'>gisgraphy</entry>
+    <entry key='geocoder.url'>http://services.gisgraphy.com/reversegeocoding/search</entry>
 
 </properties>
