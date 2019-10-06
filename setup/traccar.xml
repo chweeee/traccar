@@ -17,8 +17,10 @@
     For list of available parameters see following page: https://www.traccar.org/configuration-file/
 
     -->
-    <!-- webport config -->
+    <!-- web interface config -->
+    <entry key='web.enable'>true</entry>
     <entry key='web.port'>80</entry>
+    <entry key='web.path'>/opt/traccar/web</entry>
 
     <!-- database config -->
     <entry key='database.driver'>com.mysql.jdbc.Driver</entry>
@@ -37,5 +39,14 @@
     <!-- enables the event subsystem -->
     <entry key='event.enable'>true</entry>
     <entry key='event.motion.speedThreshold'>0.01</entry>
+
+    <!-- email notifications -->
+    <entry key='mail.smtp.host'>smtp.gmail.com</entry>
+    <entry key='mail.smtp.port'>465</entry>
+    <entry key='mail.smtp.ssl.enable'>true</entry>
+    <entry key='mail.smtp.from'>ftt.cheewee.tan@grab.com</entry>
+    <entry key='mail.smtp.auth'>true</entry>
+    <entry key='mail.smtp.username'>ftt.cheewee.tan@grab.com</entry>
+    <entry key='mail.smtp.password'>hcllurgjxdiqjjib</entry>
 
 </properties>
