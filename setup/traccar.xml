@@ -17,13 +17,22 @@
     For list of available parameters see following page: https://www.traccar.org/configuration-file/
 
     -->
+    <!-- webport config -->
+    <entry key='web.port'>80</entry>
 
-    <entry key='database.driver'>org.h2.Driver</entry>
-    <entry key='database.url'>jdbc:h2:./data/database</entry>
-    <entry key='database.user'>sa</entry>
-    <entry key='database.password'></entry>
+    <!-- database config -->
+    <entry key='database.driver'>com.mysql.jdbc.Driver</entry>
+    <entry key='database.url'>jdbc:mysql://localhost/traccar?allowMultiQueries=true&amp;autoReconnect=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8&amp;sessionVariables=sql_mode=''</entry>
+    <entry key='database.user'>root</entry>
+    <entry key='database.password'>root</entry>
+
+    <!-- device state config -->
     <entry key='status.timeout'>86400</entry>
+
+    <!-- reverse geocoding config -->
     <entry key='geocoder.enable'>true</entry>
-    <entry key='geocoder.type'>google</entry>
+    <entry key='geocoder.type'>nominatim</entry>
+    <entry key='geocoder.url'>https://eu1.locationiq.com/v1/reverse.php</entry>
+    <entry key='geocoder.key'>5cd7c03887fe11</entry>
 
 </properties>
