@@ -46,7 +46,7 @@
 
     <!-- enables the event subsystem -->
     <entry key='event.enable'>true</entry>
-    <entry key='event.motion.speedThreshold'>0.01</entry>
+    <entry key='event.motion.speedThreshold'>5</entry>
 
     <!-- email notifications -->
     <entry key='mail.smtp.host'>smtp.gmail.com</entry>
