@@ -49,13 +49,13 @@
     <entry key='event.motion.speedThreshold'>5</entry>
 
     <!-- email notifications -->
-    <entry key='mail.smtp.host'>smtp.gmail.com</entry>
+    <entry key='mail.smtp.host'>smtp.office365.com</entry>
     <entry key='mail.smtp.port'>587</entry>
     <entry key='mail.smtp.starttls.enable'>true</entry>
-    <entry key='mail.smtp.from'>haldenickk@gmail.com</entry>
+    <entry key='mail.smtp.from'>gv_traccar_notif@outlook.com</entry>
     <entry key='mail.smtp.auth'>true</entry>
-    <entry key='mail.smtp.username'>haldenickk@gmail.com</entry>
-    <entry key='mail.smtp.password'>369gq46c</entry>
+    <entry key='mail.smtp.username'>gv_traccar_notif@outlook.com</entry>
+    <entry key='mail.smtp.password'>P@ssword321!</entry>
 
     <!-- sms notifications
     <entry key='notificator.types'>web,mail,sms</entry>
