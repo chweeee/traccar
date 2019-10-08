@@ -49,7 +49,7 @@
     <entry key='event.motion.speedThreshold'>5</entry>
 
     <!-- email notifications -->
-    <entry key='mail.smtp.host'>smtp.office365.com</entry>
+    <entry key='mail.smtp.host'>smtp-mail.outlook.com</entry>
     <entry key='mail.smtp.port'>587</entry>
     <entry key='mail.smtp.starttls.enable'>true</entry>
     <entry key='mail.smtp.from'>gv_traccar_notif@outlook.com</entry>
