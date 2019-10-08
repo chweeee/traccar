@@ -20,7 +20,7 @@
 
     <!-- logging config -->
     <entry key='logger.enable'>true</entry>
-    <entry key='logger.level'>info,config,warning</entry>
+    <entry key='logger.level'>info</entry>
     <entry key='logger.file'>/opt/traccar/logs/tracker-server.log</entry>
     <entry key='filter.enable'>true</entry>
     <entry key='filter.zero'>true</entry>
