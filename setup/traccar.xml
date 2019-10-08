@@ -20,7 +20,7 @@
 
     <!-- logging config -->
     <entry key='logger.enable'>true</entry>
-    <entry key='logger.level'>all</entry>
+    <entry key='logger.level'>info,config,warning</entry>
     <entry key='logger.file'>/opt/traccar/logs/tracker-server.log</entry>
     <entry key='filter.enable'>true</entry>
     <entry key='filter.zero'>true</entry>
@@ -50,8 +50,8 @@
 
     <!-- email notifications -->
     <entry key='mail.smtp.host'>smtp.gmail.com</entry>
-    <entry key='mail.smtp.port'>465</entry>
-    <entry key='mail.smtp.ssl.enable'>true</entry>
+    <entry key='mail.smtp.port'>587</entry>
+    <entry key='mail.smtp.starttls.enable'>true</entry>
     <entry key='mail.smtp.from'>haldenickk@gmail.com</entry>
     <entry key='mail.smtp.auth'>true</entry>
     <entry key='mail.smtp.username'>haldenickk@gmail.com</entry>
