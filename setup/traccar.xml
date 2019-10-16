@@ -48,8 +48,15 @@
     <entry key='event.enable'>true</entry>
 
     <!-- tracking motion and trip definitions -->
-    <entry key='event.motion.speedThreshold'>5</entry>
+    <entry key='event.motion.speedThreshold'>0.01</entry>
     <entry key='report.trip.useIgnition'>true</entry>
+    <entry key='status.updateDeviceState'>true</entry>
+    <!-- to be configured -->
+    <entry key='report.trip.minimalTripDuration'>0</entry>
+    <entry key='report.trip.minimalTripDistance'>0</entry>
+    <entry key='report.trip.minimalParkingDuration'>0</entry>
+    <entry key='report.trip.minimalNoDataDuration'>0</entry>
+
 
     <!-- email notifications -->
     <entry key='mail.smtp.host'>smtp-mail.outlook.com</entry>
