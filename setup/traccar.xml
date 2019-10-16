@@ -46,7 +46,10 @@
 
     <!-- enables the event subsystem -->
     <entry key='event.enable'>true</entry>
+
+    <!-- tracking motion and trip definitions -->
     <entry key='event.motion.speedThreshold'>5</entry>
+    <entry key='report.trip.useIgnition'>true</entry>
 
     <!-- email notifications -->
     <entry key='mail.smtp.host'>smtp-mail.outlook.com</entry>
