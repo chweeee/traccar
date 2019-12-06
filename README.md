@@ -30,7 +30,7 @@ Some of the available features include:
 ## Installation Guide
 Before starting the installation make sure that you have a cloud server running Ubuntu, or any Linux Distribution.
 
-### Installing default build
+## Installing default build
 Follow the instructions on this [link](https://www.traccar.org/install-digitalocean/) to install the default build on any Linux cloud server.
 
 #### Downloading Traccar package for Linux
@@ -47,8 +47,11 @@ Replace the default config file with the one found in this repository, using the
 sudo systemctl start traccar.service
 sudo systemctl status traccar.service
 ```
+---
 
-### Installing dependencies
+## Installing Custom Traccar Build
+
+#### Installing dependencies
 1) installing Java and Maven:
 ```
 $ sudo apt install default-jdk
@@ -62,8 +65,7 @@ $ wget http://cdn.sencha.com/cmd/6.2.1/no-jre/SenchaCmd-6.2.1-linux-amd64.sh.zip
 $ unzip SenchaCmd-6.2.1-linux-amd64.sh.zip
 $ sudo ./SenchaCmd-6.2.1.29-linux-amd64.sh -q -dir /bin
 ```
-
-### Installing Custom Traccar Build
+#### Getting custom source code
 1) Go to root directory `cd ~`. Clone this repository via the following command.
 ```
 git clone --recursive https://github.com/chweeee/traccar
@@ -76,7 +78,7 @@ mvn package
 ```
 2) You will see a file ending with `.jar` in `traccar/target`. Replace `.jar` file in `/opt/traccar` with this file.
 
-3) repeat step 1 to 2 whenever changes are made to the back-end source code.
+3) **Repeat step 1 to 2 whenever changes are made to the back-end source code.**
 
 #### Replacing default front-end with custom build
 1) Change into the the traccar-web repository.
@@ -91,5 +93,5 @@ cd /home/ubuntu/traccar/traccar-web/tools
 ```
 sudo cp -r /home/ubuntu/traccar/traccar-web/web /opt/traccar
 ```
-4) repeat step 1 to 3 whenever changes are made to the front-end source code.
+4) **Repeat step 1 to 3 whenever changes are made to the front-end source code.**
 
