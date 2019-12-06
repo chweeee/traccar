@@ -1,5 +1,4 @@
 # [Traccar](https://www.traccar.org)
-[![Build Status](https://travis-ci.org/traccar/traccar.svg?branch=master)](https://travis-ci.org/traccar/traccar)
 
 ## Overview
 
@@ -28,27 +27,69 @@ Some of the available features include:
 - Account and device management
 - Email and SMS support
 
-## Build
+## Installation Guide
+Before starting the installation make sure that you have a cloud server running Ubuntu, or any Linux Distribution.
 
-Please read [build from source documentation](https://www.traccar.org/build/) on the official website.
+### Installing default build
+Follow the instructions on this [link](https://www.traccar.org/install-digitalocean/) to install the default build on any Linux cloud server.
 
-## Team
+#### Downloading Traccar package for Linux
+Check that you're downloading the latest Linux version everytime. 
+```
+Correct as at: 5/12/2019
+https://github.com/traccar/traccar/releases/download/v4.6/traccar-linux-64-4.6.zip
+```
+#### Replace default config file
+Replace the default config file with the one found in this repository, using the same instructions as stated in the link.
 
-- Anton Tananaev ([anton@traccar.org](mailto:anton@traccar.org))
-- Andrey Kunitsyn ([andrey@traccar.org](mailto:andrey@traccar.org))
+#### Starting the service and check status
+```
+sudo systemctl start traccar.service
+sudo systemctl status traccar.service
+```
 
-## License
+### Installing dependencies
+1) installing Java and Maven:
+```
+$ sudo apt install default-jdk
+$ sudo apt install maven
+```
+2) Go to root directory ` cd ~`. Installing Sencha
+```
+$ wget http://cdn.sencha.com/ext/gpl/ext-6.2.0-gpl.zip
+$ unzip ext-6.2.0-gpl.zip
+$ wget http://cdn.sencha.com/cmd/6.2.1/no-jre/SenchaCmd-6.2.1-linux-amd64.sh.zip
+$ unzip SenchaCmd-6.2.1-linux-amd64.sh.zip
+$ sudo ./SenchaCmd-6.2.1.29-linux-amd64.sh -q -dir /bin
+```
 
-    Apache License, Version 2.0
+### Installing Custom Traccar Build
+1) Go to root directory `cd ~`. Clone this repository via the following command.
+```
+git clone --recursive https://github.com/chweeee/traccar
+```
+#### Replacing default back-end with custom build
+1) Change into the `traccar` directory and build from source code.
+```
+cd traccar
+mvn package
+```
+2) You will see a file ending with `.jar` in `traccar/target`. Replace `.jar` file in `/opt/traccar` with this file.
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+3) repeat step 1 to 2 whenever changes are made to the back-end source code.
 
-        http://www.apache.org/licenses/LICENSE-2.0
+#### Replacing default front-end with custom build
+1) Change into the the traccar-web repository.
+```
+cd /home/ubuntu/traccar/traccar-web/tools 
+```
+2) Build from source.
+```
+./minify.sh
+```
+3) Copy the entire `web` folder over to `/opt/traccar`.
+```
+sudo cp -r /home/ubuntu/traccar/traccar-web/web /opt/traccar
+```
+4) repeat step 1 to 3 whenever changes are made to the front-end source code.
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
